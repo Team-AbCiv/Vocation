@@ -127,7 +127,7 @@ public class HUDHandler {
 		
 		String n = EnumChatFormatting.BOLD + m.narrator;
 		TextRenderer.renderText(0, 0, font.getStringWidth(n), 1, color1, color2, n);
-		TextRenderer.renderText(0, 24, maxWidth, 1, color1, color2, m.message);
+		TextRenderer.renderText(0, 24, maxWidth, 1, color1, color2, StatCollector.translate(m.message));
 		
 		GL11.glPopMatrix();
 	}
