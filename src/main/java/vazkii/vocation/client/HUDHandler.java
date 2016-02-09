@@ -6,6 +6,7 @@ import java.util.Queue;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
 
@@ -126,8 +127,8 @@ public class HUDHandler {
 		GL11.glTranslatef(((maxWidth + dist) * a - maxWidth) / scale, y / scale, 0F);
 		
 		String n = EnumChatFormatting.BOLD + m.narrator;
-		TextRenderer.renderText(0, 0, font.getStringWidth(n), 1, color1, color2, n);
-		TextRenderer.renderText(0, 24, maxWidth, 1, color1, color2, StatCollector.translate(m.message));
+		TextRenderer.renderText(0, 0, font.getStringWidth(n), 1, color1, color2, StatCollector.translateToLocal(n));
+		TextRenderer.renderText(0, 24, maxWidth, 1, color1, color2, StatCollector.translateToLocal(m.message));
 		
 		GL11.glPopMatrix();
 	}
