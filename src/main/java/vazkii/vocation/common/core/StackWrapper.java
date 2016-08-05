@@ -1,13 +1,13 @@
 package vazkii.vocation.common.core;
 
+import com.google.gson.JsonObject;
+
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.JsonToNBT;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTException;
 import net.minecraft.nbt.NBTTagCompound;
-
-import com.google.gson.JsonObject;
 
 public class StackWrapper {
 

@@ -3,12 +3,11 @@ package vazkii.vocation.client;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.common.base.Joiner;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
-import net.minecraft.util.StatCollector;
-
-import com.google.common.base.Joiner;
 
 public class TextRenderer {
 

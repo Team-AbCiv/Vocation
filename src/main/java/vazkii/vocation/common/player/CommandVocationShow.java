@@ -1,10 +1,10 @@
 package vazkii.vocation.common.player;
 
-import vazkii.vocation.common.core.Message;
-import vazkii.vocation.common.core.MessageLoader;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayerMP;
+import vazkii.vocation.common.core.Message;
+import vazkii.vocation.common.core.MessageLoader;
 
 public class CommandVocationShow extends CommandBase {
 

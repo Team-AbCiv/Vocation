@@ -1,9 +1,9 @@
 package vazkii.vocation.common.network;
 
-import vazkii.vocation.common.Vocation;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.relauncher.Side;
+import vazkii.vocation.common.Vocation;
 
 public class NetworkHandler {
 
