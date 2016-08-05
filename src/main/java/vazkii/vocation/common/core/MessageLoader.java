@@ -61,6 +61,6 @@ public class MessageLoader {
 	}
 	
 	public static void clear() {
-		allMessages = new HashMap();
+		allMessages = new HashMap<String, Message>();
 	}
 }

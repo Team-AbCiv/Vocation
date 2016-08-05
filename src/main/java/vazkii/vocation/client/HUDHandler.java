@@ -22,7 +22,7 @@ public class HUDHandler {
 	private static final int FADE_TICKS = 10;
 	
 	// TODO Clear on world leave
-	private Queue<Message> messageQueue = new ArrayDeque();
+	private Queue<Message> messageQueue = new ArrayDeque<Message>();
 	private Message currentMessage;
 	private Message lastMessage;
 	int ticksOnCurrentMessage = 0;
@@ -109,6 +109,7 @@ public class HUDHandler {
 		FontRenderer font = mc.fontRenderer;
 		
 		int maxWidth = ConfigHandler.boxWidth;
+		@SuppressWarnings("unused")
 		float width = Math.min(maxWidth, font.getStringWidth(m.message));
 		float dist = ConfigHandler.paddingX;
 		float y = ConfigHandler.paddingY;

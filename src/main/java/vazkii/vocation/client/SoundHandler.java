@@ -23,6 +23,7 @@ public class SoundHandler {
 	private static final String[] SOUND_MANAGER_MAPPING = new String[]{"sndManager", "field_147694_f"};
 	private static final String[] SOUND_SYSTEM_MAPPING = new String[]{"sndSystem", "field_148620_e"};
 
+	@SuppressWarnings("unused")
 	private static boolean gamePause = false;
 
 	private Set<String> isLoaded = Sets.newHashSet();

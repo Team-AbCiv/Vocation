@@ -10,13 +10,14 @@ import net.minecraft.nbt.NBTTagByte;
 import net.minecraft.nbt.NBTTagCompound;
 import vazkii.vocation.common.core.MessageLoader;
 
+@SuppressWarnings({"serial", "unchecked"})
 public class PlayerDataStorage {
 
 	private static final String DATA_TAG = "VocationData";
 	private static final String LAST_SEEN = "_lastSeen";
 	private static final String SHOWN_MESSAGE = "_shownMessage";
 	
-	private static final List<String> exempt = new ArrayList() {{
+	private static final List<String> exempt = new ArrayList<String>() {{
 		add(LAST_SEEN);
 		add(SHOWN_MESSAGE);
 	}};
@@ -37,7 +38,7 @@ public class PlayerDataStorage {
 		NBTTagCompound cmp = getDataForPlayer(player);
 		Set<String> keys = cmp.func_150296_c();
 		
-		List<String> completed = new ArrayList();
+		List<String> completed = new ArrayList<String>();
 		for(String s : keys) {
 			if(exempt.contains(s))
 				continue;
@@ -65,7 +66,7 @@ public class PlayerDataStorage {
 	public static void clearAllSeen(EntityPlayer player) {
 		NBTTagCompound cmp = getDataForPlayer(player);
 		
-		List<String> keys = new ArrayList(cmp.func_150296_c());
+		List<String> keys = new ArrayList<String>(cmp.func_150296_c());
 		for(String s : keys)
 			if(!exempt.contains(s))
 				cmp.removeTag(s);

@@ -16,11 +16,11 @@ public class TextRenderer {
 		String text = unparsedText.replaceAll("&", "\u00a7");
 		String[] textEntries = text.split("<br>");
 
-		List<List<String>> lines = new ArrayList();
+		List<List<String>> lines = new ArrayList<List<String>>();
 
 		String controlCodes = "";
 		for(String s : textEntries) {
-			List<String> words = new ArrayList();
+			List<String> words = new ArrayList<String>();
 			String lineStr = "";
 			String[] tokens = s.split(" ");
 			for(String token : tokens) {
@@ -32,7 +32,7 @@ public class TextRenderer {
 				if(font.getStringWidth(lineStr) > width) {
 					lines.add(words);
 					lineStr = controlCodes + spaced;
-					words = new ArrayList();
+					words = new ArrayList<String>();
 				}
 
 				words.add(controlCodes + token);
@@ -40,7 +40,7 @@ public class TextRenderer {
 
 			if(!lineStr.isEmpty())
 				lines.add(words);
-			lines.add(new ArrayList());
+			lines.add(new ArrayList<String>());
 		}
 
 		int height = 0;
@@ -50,6 +50,7 @@ public class TextRenderer {
 		Gui.drawRect(-6 + x, -6 + y, (int) width + 6 + x, height + 5 + y, color1);
 		Gui.drawRect(-4 + x, -4 + y, (int) width + 4 + x, height + 3 + y, color2);
 		
+		@SuppressWarnings("unused")
 		int i = 0;
 		for(List<String> words : lines) {
 			int xi = x;
